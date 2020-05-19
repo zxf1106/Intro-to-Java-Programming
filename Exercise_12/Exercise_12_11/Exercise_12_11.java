@@ -51,10 +51,10 @@ public class Exercise_12_11 {
 	public static String removeString(String string, String line) {
 		StringBuilder stringBuilder = new StringBuilder(line);
 		int start = stringBuilder.indexOf(string); // Start index
-		int end = string.length(); // End index
+		int length = string.length();
 
 		while (start >= 0) {
-			end = start + end;
+			int end = start + length;
 			stringBuilder = stringBuilder.delete(start, end);
 			start = stringBuilder.indexOf(string, start); 
 		}
